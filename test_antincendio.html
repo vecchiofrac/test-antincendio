@@ -1,0 +1,102 @@
+<!--
+    Quiz di accertamento per rilascio dell'attestato di idoneità tecnica per la qualifica di “Addetto Antincendio” 
+    Realizzato da Franz 2026 per conto di ASUIT, Servizio prevenzione e protezione.
+
+    Struttura dati, logica del motore e ottimizzazioni sviluppate con il supporto
+    dell’assistente AI Microsoft Copilot. Rifiniture con AI Google Search Generative Experience.
+
+    Il file contiene:
+      - Dati delle schede compressi e incorporati
+      - Motore JS avanzato (risposte obbligatorie + riepilogo dettagliato)
+      - Layout base con logo aziendale
+      - Architettura completamente offline e auto‑contenuta
+
+    Questo commento non viene visualizzato nella pagina.
+-->
+
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <title>Quiz di accertamento per rilascio idoneità Addetto antincendio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="header">
+            <img src="Logo_ASUIT.png" alt="Logo Aziendale" id="logo">
+        </div>
+
+        <div id="container-introduzione" class="container-introduzione">
+            <h2>Preparazione all'Esame<br>per Addetti Antincendio</h2>
+            
+            <p>In questa sezione sono disponibili i <strong>test interattivi ufficiali</strong> 
+                basati sulla banca dati ministeriale elaborata dal <strong>Corpo Nazionale dei 
+                Vigili del Fuoco</strong>. Il materiale didattico è curato dalla <em>Direzione 
+                Centrale per la Prevenzione e la Sicurezza Tecnica</em> ed è specifico per 
+                il conseguimento dell'attestato di idoneità tecnica per gli addetti alle emergenze.<br>
+                Premi il pulsante "Scegli la Scheda" per iniziare una simulazione d'esame completa 
+                oppure il pulsante "Modalità allenamento" per esercitarti senza limiti di tempo e con feedback immediato.
+            </p>
+
+            <h3>Struttura della Banca Dati e Valutazione</h3>
+            <ul>
+                <li><strong>Archivio Quesiti:</strong> La banca dati nazionale è composta complessivamente 
+                    da <strong>345 domande</strong> a risposta multipla. Per ogni quesito è prevista un'unica 
+                    opzione corretta tra quelle proposte.</li>
+                <li><strong>Composizione delle Schede:</strong> Il sistema organizza le domande in 
+                    <strong>50 schede d'esame</strong> predefinite. Ogni singola scheda contiene 
+                    <strong>15 quesiti</strong> estratti dal database principale.</li>
+                <li><strong>Soglia di Superamento:</strong> La prova teorica si considera superata con esito 
+                    positivo se il candidato risponde correttamente ad almeno <strong>10 domande su 15</strong>.</li>
+            </ul>
+
+            <h3>Finalità dell'Esercitazione</h3>
+            <p>I test sono progettati per verificare la conoscenza su temi cruciali come la chimica 
+                del fuoco, le misure di protezione antincendio e le procedure di evacuazione. 
+                Esercitarsi con queste simulazioni permette di familiarizzare con il formato 
+                ufficiale utilizzato dai Comandi Provinciali durante le sessioni d'esame.
+            </p>
+
+            <h3>Modalità «allenamento»</h3>
+            <p>Il pulsante "Modalità allenamento" consente di affrontare i quiz senza la pressione del superamento, 
+                offrendo un ambiente ideale per l'apprendimento e la revisione dei concetti chiave. 
+                In questa modalità, è possibile ricevere feedback immediato sulle risposte fornite, 
+                facilitando così l'identificazione delle aree che necessitano di ulteriore studio.
+            </p>
+
+            <div class="button-container">
+                <button id="schede-btn" class="btn">Scegli la Scheda</button>
+                <button id="training-mode-btn" class="btn">Modalità allenamento</button>
+            </div>
+
+            <!-- Footer / Disclaimer integrato -->
+            <footer class="esercitazione-footer">
+                <div class="contatti-info">
+                    <strong>Contatti Servizio Prevenzione e Protezione</strong><br>
+                    Email: <a href="mailto:rspp@asuit.tn.it">rspp@asuit.tn.it</a><br>
+                    Sito: <a href="https://www.asuit.tn.it/entita-organizzative/servizio-prevenzione-e-protezione" target="_blank">ASUIT Trento</a>
+                </div>
+                <div class="credits">
+                    <p>Realizzato da <strong>Francesco Cadin</strong></p>
+                    <p>&copy; 2026 Test antincendio Web App</p>
+                </div>
+            </footer>
+        </div>
+
+        <div id="container-app">
+            <!-- Il quiz e il riepilogo vengono generati dinamicamente qui -->
+        </div>
+
+        <!-- Pako locale (pako.min.js in locale) 
+            Il file pako.min.js è la versione ottimizzata e compressa ("minificata") di Pako,
+            una libreria JavaScript ad alte prestazioni utilizzata per la compressione e
+            decompressione dei dati direttamente nel browser o in ambienti Node.js.
+            Nello specifico, serve a implementare algoritmi di compressione standard come zlib, 
+            deflate e gzip.
+         -->
+        <script src="pako.min.js"></script>
+
+        <!-- Dati offuscati incorporati -->
+        <script src="script.js"></script>
+    </body>
+</html>

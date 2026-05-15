@@ -1,0 +1,441 @@
+html, body {
+    /*overflow-x: hidden;*/
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Layout generale */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    background: #f3f4f6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra orizzontalmente tutti i figli diretti */
+}
+
+/* ----------------------------------------------------------------- */
+/* Container principale dell'esercitazione */
+.container-introduzione {
+    max-width: 800px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-top: 6px solid #db1b1b; /* Rosso Istituzionale Vigili del Fuoco */
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Titolo principale */
+.container-introduzione h2 {
+    color: #db1b1b;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Sottotitoli delle sezioni */
+.container-introduzione h3 {
+    color: #2c3e50;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+}
+
+/* Stilizzazione paragrafi */
+.container-introduzione p {
+    margin-bottom: 1rem;
+}
+
+/* Stilizzazione lista puntata */
+.container-introduzione ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.container-introduzione li {
+    background: #f9f9f9;
+    margin-bottom: 0.8rem;
+    padding: 1rem;
+    border-left: 4px solid #db1b1b;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+}
+
+.container-introduzione li:hover {
+    transform: translateX(5px);
+    background: #f2f2f2;
+}
+
+/* Enfasi sul testo */
+.container-introduzione strong {
+    color: #000;
+    font-weight: 700;
+}
+
+/* Stilizzazione del Footer interno al container */
+.esercitazione-footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.contatti-info {
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.contatti-info a {
+    color: #db1b1b;
+    text-decoration: none;
+    transition: text-decoration 0.2s;
+}
+
+.contatti-info a:hover {
+    text-decoration: underline;
+}
+
+.credits {
+    text-align: center;
+    border-top: 1px dashed #ddd;
+    padding-top: 1rem;
+}
+
+.credits p {
+    margin: 0.2rem 0;
+    font-style: italic;
+    font-size: 10px;
+}
+
+/* ----------------------------------------------------------------- */
+/* Header centrato */
+#header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Logo */
+#logo {
+    height: 90px;
+    margin-bottom: 10px;
+}
+
+/* Contenitore principale del quiz */
+#container-app {
+    display: none; /* Nascondi inizialmente */
+    background: #ffffff;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto; 
+    padding: 24px 28px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+    box-sizing: border-box;
+}
+
+#container-app h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Pulsanti generali */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 999px;
+    border: none;
+    background: #2563eb;
+    color: #ffffff;
+    font-weight: 500;
+    transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.1s ease;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(37, 99, 235, 0.35);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(37, 99, 235, 0.25);
+}
+
+/* Pulsanti elenco schede */
+/* Contenitore dei pulsanti */
+/* Wrapper per la lista delle schede - Centrato e compatto */
+.lista-pulsanti-schede {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px auto; /* Centra il blocco nella pagina */
+    max-width: 400px;  /* Limita la larghezza massima dei pulsanti */
+    width: 90%;        /* Adattabilità su schermi piccoli */
+}
+
+/* Stile dei singoli pulsanti (ereditato o definito qui) */
+.scheda-btn {
+    padding: 12px;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #fdfdfd;
+    transition: transform 0.1s;
+    color: rgb(39, 39, 39);
+    border-radius: 10px;
+}
+
+.scheda-btn:active {
+    transform: scale(0.98); /* Feedback al click */
+}
+
+.scheda-btn:hover {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.18);
+}
+
+.allenamento-btn {
+    min-width: 150px;
+    background-color: #2b7cff; /* blu acceso */
+    color: white;
+    margin-right: 20px;
+}
+
+/* Hover: testo sempre leggibile */
+.allenamento-btn:hover {
+    background-color: #1a5ed8; /* leggermente più scuro */
+    color: #000; /* testo nero per massima leggibilità */
+}
+
+/* Domande nel form */
+#quizForm > div {
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    background: #f9fafb;
+}
+
+#quizForm p {
+    margin: 0 0 8px 0;
+    color: #111827;
+}
+
+#quizForm label {
+    font-size: 15px;
+    color: #374151;
+}
+
+#quizForm input[type="radio"] {
+    margin-right: 6px;
+}
+
+/* Messaggio di errore (risposte obbligatorie) */
+#msgErrore {
+    margin-bottom: 12px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+    font-size: 14px;
+}
+
+/* Immagini delle domande */
+img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Riepilogo */
+.question-summary {
+    margin-bottom: 14px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+}
+
+.question-image-box {
+    margin: 10px 0;
+    padding: 8px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.question-image-box img {
+    max-width: 100%;
+    max-height: 250px;
+    border-radius: 6px;
+}
+
+.answer-correct {
+    color: #15803d;
+    font-weight: 500;
+}
+
+.answer-wrong {
+    color: #b91c1c;
+    font-weight: 500;
+}
+
+.answer-icon {
+    margin-left: 6px;
+    font-weight: 600;
+}
+
+/* Contenitore della risposta */
+.risposta-radio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 2px solid #d0d0d0;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-size: 16px;
+}
+
+/* Hover moderno */
+.risposta-radio:hover {
+    border-color: #2b7cff;
+    background-color: #eef4ff;
+}
+
+/* Corretto */
+.risposta-radio.corretta {
+    background-color: #c8f7c5;
+    border-color: #4caf50;
+    animation: flash-correct 0.6s ease;
+}
+
+/* Errata */
+.risposta-radio.errata {
+    background-color: #f7c5c5;
+    border-color: #e53935;
+    animation: flash-correct 0.35s ease;
+}
+
+/* Esito (corretto, errato) */
+.esito-box {
+    animation: fade-in 0.4s ease;
+}
+
+.domanda-box-subtitle {
+    font-size: 16px;
+    font-weight: normal;
+    color: #555;
+    padding: 10px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.domanda-box h3 {
+    padding-top: 20px;
+}
+
+@keyframes flash-correct {
+    0%   { background-color: #c8f7c5; }
+    50%  { background-color: #a4e8a0; }
+    100% { background-color: #c8f7c5; }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(4px); }
+    75% { transform: translateX(-4px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(4px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container-introduzione {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+}
+
+/*------------------------------------------------
+/* aggiunto per navigazione in Scegli la scheda */
+/* Contenitore pulsanti Home e Allenamento affiancati */
+.nav-top {
+    display: flex;
+    flex: 1;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+    width: 100%;
+    text-align: center;
+    max-width: 400px;
+}
+
+/* Contenitore pulsanti Home e Allenamento affiancati */
+.nav-header {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.nav-header button {
+    flex: 1;
+    border-radius: 10px; /* Più squadrati come le schede, se preferisci */
+}
+
+/* Contenitore statistiche allenamento */
+.stats-allenamento {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px 0;
+    font-size: 14px;
+    color: #475569;
+}
+
+.stats-item {
+    text-align: center;
+}
+
+.stats-value {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    color: #1e293b;
+}
